@@ -1,4 +1,4 @@
-package chap07.state._01.ex03;
+package chap07.state.ex03;
 
 public interface LightState {
     void onButtonClicked(Light light);

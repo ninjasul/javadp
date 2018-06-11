@@ -1,6 +1,4 @@
-package chap07.state._01.ex05;
-
-import java.util.ArrayList;
+package chap07.state.ex05;
 
 public interface State {
     void moneyInserted(Beverage beverage, int price);

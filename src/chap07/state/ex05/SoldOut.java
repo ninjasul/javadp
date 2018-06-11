@@ -1,4 +1,4 @@
-package chap07.state._01.ex05;
+package chap07.state.ex05;
 
 public class SoldOut extends AbstractState {
     private static SoldOut state = new SoldOut();

@@ -1,6 +1,4 @@
-package chap07.state._01.ex05;
-
-import java.util.ArrayList;
+package chap07.state.ex05;
 
 public class OnSale extends AbstractState {
     private static OnSale state = new OnSale();
