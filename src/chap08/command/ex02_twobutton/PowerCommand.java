@@ -1,4 +1,4 @@
-package chap08.command.ex;
+package chap08.command.ex02_twobutton;
 
 public class PowerCommand implements Command {
     private TV tv;
