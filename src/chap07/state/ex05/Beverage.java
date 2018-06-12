@@ -4,13 +4,13 @@ public class Beverage {
     private String name;
     private int price;
     private int stockCnt;
-    private AbstractState state;
+    private AbstractBeverageState state;
 
     public Beverage(String name, int price, int stockCnt) {
         this.name = name;
         this.price = price;
         this.stockCnt = stockCnt;
-        this.state = SoldOut.getInstance();
+        this.state = SoldOutBeverageState.getInstance();
     }
 
     public String getName() {
@@ -37,11 +37,11 @@ public class Beverage {
         this.stockCnt = stockCnt;
     }
 
-    public AbstractState getState() {
+    public AbstractBeverageState getState() {
         return state;
     }
 
-    public void setState(AbstractState state) {
+    public void setState(AbstractBeverageState state) {
         this.state = state;
     }
 }
