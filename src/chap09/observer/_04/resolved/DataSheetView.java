@@ -6,18 +6,18 @@ public class DataSheetView implements Observer{
 
 	private ScoreRecord scoreRecord;
 	private int viewCount;
-	
+
 	public DataSheetView( ScoreRecord scoreRecord, int viewCount ) {
 		this.scoreRecord = scoreRecord;
 		this.viewCount = viewCount;
 	}
-	
+
 	public void update() {
 		List<Integer> record = scoreRecord.getScoreRecord();
 		displayScores( record, viewCount );
 	}
-	
-	// viewCount ¸¸Å­ List¸¦ ¼øÈ¸ÇÏ¸é¼­ ÀÔ·ÂµÈ Á¡¼ö¸¦ Ãâ·ÂÇÔ.
+
+	// viewCount ë§Œí¼ Listë¥¼ ìˆœíšŒí•˜ë©´ì„œ ì…ë ¥ëœ ì ìˆ˜ë¥¼ ì¶œë ¥í•¨.
 	private void displayScores( List<Integer> record, int viewCount ) {
 		System.out.println("List of " + viewCount + " entries: " );
 		for( int i = 0; i < viewCount && i < record.size(); i++ ) {

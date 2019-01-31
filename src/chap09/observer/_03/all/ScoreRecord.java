@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScoreRecord {
-	private List<Integer> scores = new ArrayList<Integer>(); 						// Á¡¼ö¸¦ ÀúÀåÇÔ
-	private List<DataSheetView> dataSheetViews = new ArrayList<DataSheetView>();	// ¸ñ·Ï ÇüÅÂ·Î Á¡¼ö¸¦ Ãâ·ÂÇÏ´Â Å¬·¡½º
-	private MinMaxView minMaxView; 					 								// Á¡¼öÀÇ ÃÖ¼Ò°ª/ÃÖ´ë°ªÀ» Ãâ·ÂÇÏ´Â Å¬·¡½º
-	
+	private List<Integer> scores = new ArrayList<Integer>(); 								// ì ìˆ˜ë¥¼ ì €ì¥í•¨
+	private List<DataSheetView> dataSheetViews = new ArrayList<DataSheetView>();	// ëª©ë¡ í˜•íƒœë¡œ ì ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” í´ë˜ìŠ¤
+	private MinMaxView minMaxView; 					 								// ì ìˆ˜ì˜ ìµœì†Œê°’/ìµœëŒ€ê°’ì„ ì¶œë ¥í•˜ëŠ” í´ë˜ìŠ¤
+
 	public void addDataSheetView(DataSheetView dataSheetView) {
 		this.dataSheetViews.add(dataSheetView);
 	}
@@ -15,16 +15,16 @@ public class ScoreRecord {
 	public void setMinMaxView(MinMaxView minMaxView) {
 		this.minMaxView = minMaxView;
 	}
-	
+
 	public void addScore( int score ) {
 		scores.add(score);
-		
+
 		for( DataSheetView dataSheetView: dataSheetViews ) {
 			dataSheetView.update();
 		}
 		minMaxView.update();
 	}
-	
+
 	public List<Integer> getScoreRecord() {
 		return scores;
 	}

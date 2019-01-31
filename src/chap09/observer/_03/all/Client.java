@@ -3,21 +3,21 @@ package chap09.observer._03.all;
 public class Client {
 	public static void main (String[] args ) {
 		ScoreRecord scoreRecord = new ScoreRecord ();
-				
-		// 3 °³ ¸ñ·ÏÀÇ DataSheetView ½é¼º
+
+		// 3 ê°œ ëª©ë¡ì˜ DataSheetView ì½ì„±
 		DataSheetView dataSheetView3 = new DataSheetView(scoreRecord, 3);
-		
-		// 5 °³ ¸ñ·ÏÀÇ DataSheetView »ù¼º
+
+		// 5 ê°œ ëª©ë¡ì˜ DataSheetView ìƒ˜ì„±
 		DataSheetView dataSheetView5 = new DataSheetView(scoreRecord, 5);
-		MinMaxView minMaxView = new MinMaxView(scoreRecord); 	// MinMaxView »ı¼º
-		scoreRecord.addDataSheetView(dataSheetView3); 			// 3°³ ¸ñ·Ï DataSheetView
-		scoreRecord.addDataSheetView(dataSheetView5); 			// 5°³ ¸ñ·Ï DataSheetView
-		scoreRecord.setMinMaxView (minMaxView);  				// MinMaxView ¼³Á¤
-				
+		MinMaxView minMaxView = new MinMaxView(scoreRecord); 	// MinMaxView ìƒì„±
+		scoreRecord.addDataSheetView(dataSheetView3); 			// 3ê°œ ëª©ë¡ DataSheetView
+		scoreRecord.addDataSheetView(dataSheetView5); 			// 5ê°œ ëª©ë¡ DataSheetView
+		scoreRecord.setMinMaxView (minMaxView);  				// MinMaxView ì„¤ì •
+
 		for (int index = 1; index <= 5; index++) {
 			int score = index * 10;
 			System.out.println ("Adding " + score );
-			// 10 20 30 40 50À» Ãß°¡ÇÔ, Ãß°¡ÇÒ ¶§¸¶´Ù ÃÖ´ë 3°³ÀÇ Á¡¼ö¸¸ Ãâ·ÂÇÔ
+			// 10 20 30 40 50ì„ ì¶”ê°€í•¨, ì¶”ê°€í•  ë•Œë§ˆë‹¤ ìµœëŒ€ 3ê°œì˜ ì ìˆ˜ë§Œ ì¶œë ¥í•¨
 			scoreRecord.addScore(score);
 		}
 	}

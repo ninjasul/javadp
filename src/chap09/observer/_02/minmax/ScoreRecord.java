@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScoreRecord {
-	private List<Integer> scores = new ArrayList<Integer>(); // Á¡¼ö¸¦ ÀúÀåÇÔ
-	private MinMaxView minMaxView; 					 // ¸ñ·Ï ÇüÅÂ·Î Á¡¼ö¸¦ Ãâ·ÂÇÏ´Â Å¬·¡½º
-	
+	private List<Integer> scores = new ArrayList<Integer>(); // ì ìˆ˜ë¥¼ ì €ì¥í•¨
+	private MinMaxView minMaxView; 					 // ëª©ë¡ í˜•íƒœë¡œ ì ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” í´ë˜ìŠ¤
+
 	public void setMinMaxView(MinMaxView minMaxView) {
 		this.minMaxView = minMaxView;
 	}
-	
+
 	public void addScore( int score ) {
 		scores.add(score);
 		minMaxView.update();
 	}
-	
+
 	public List<Integer> getScoreRecord() {
 		return scores;
 	}

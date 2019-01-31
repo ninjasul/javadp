@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScoreRecord extends Subject {
-	private List<Integer> scores = new ArrayList<Integer>(); 						// Á¡¼ö¸¦ ÀúÀåÇÔ
-	
+	private List<Integer> scores = new ArrayList<Integer>(); 						// ì ìˆ˜ë¥¼ ì €ì¥í•¨
+
 	public void addScore( int score ) {
 		scores.add(score);
 		notifyObservers();
 	}
-	
+
 	public List<Integer> getScoreRecord() {
 		return scores;
 	}

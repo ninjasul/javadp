@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScoreRecord {
-	private List<Integer> scores = new ArrayList<Integer>(); // Á¡¼ö¸¦ ÀúÀåÇÔ
-	private DataSheetView dataSheetView; 					 // ¸ñ·Ï ÇüÅÂ·Î Á¡¼ö¸¦ Ãâ·ÂÇÏ´Â Å¬·¡½º
-	
+	private List<Integer> scores = new ArrayList<Integer>(); // ì ìˆ˜ë¥¼ ì €ì¥í•¨
+	private DataSheetView dataSheetView; 					 // ëª©ë¡ í˜•íƒœë¡œ ì ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” í´ë˜ìŠ¤
+
 	public void setDataSheetView(DataSheetView dataSheetView) {
 		this.dataSheetView = dataSheetView;
 	}
-	
+
 	public void addScore( int score ) {
 		scores.add(score);
 		dataSheetView.update();
 	}
-	
+
 	public List<Integer> getScoreRecord() {
 		return scores;
 	}

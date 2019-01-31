@@ -3,15 +3,15 @@ package chap09.observer._02.minmax;
 public class Client {
 	public static void main (String[] args ) {
 		ScoreRecord scoreRecord = new ScoreRecord ();
-		
-		// 3 °³±îÁöÀÇ Á¢¼ö¸¸ Ãâ·ÂÇÔ
-		MinMaxView minMaxView = new MinMaxView(scoreRecord);		
+
+		// 3 ê°œê¹Œì§€ì˜ ì ‘ìˆ˜ë§Œ ì¶œë ¥í•¨
+		MinMaxView minMaxView = new MinMaxView(scoreRecord);
 		scoreRecord.setMinMaxView(minMaxView);
-		
+
 		for (int index = 1; index <= 5; index++) {
 			int score = index * 10;
 			System.out.println ("Adding " + score );
-			// 10 20 30 40 50À» Ãß°¡ÇÔ, Ãß°¡ÇÒ ¶§¸¶´Ù ÃÖ´ë 3°³ÀÇ Á¡¼ö¸¸ Ãâ·ÂÇÔ
+			// 10 20 30 40 50ì„ ì¶”ê°€í•¨, ì¶”ê°€í•  ë•Œë§ˆë‹¤ ìµœëŒ€ 3ê°œì˜ ì ìˆ˜ë§Œ ì¶œë ¥í•¨
 			scoreRecord.addScore(score);
 		}
 	}
